@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://<username>:<password>@cluster0.u9oem.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "secretOrKey": "SECRET"
+  "mongoURI": "mongodb+srv://nehap:neha1234@cluster0.u9oem.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "secretOrKey": "secret"
 }

@@ -18,5 +18,5 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
+require("../models/User");
 module.exports = connectDB;

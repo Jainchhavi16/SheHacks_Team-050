@@ -2,25 +2,18 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
+var passport = require("passport");
 
 connectDB();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/", function (req, res) {
-  let data = {
-    message: "Hello World!",
-  };
-  res.status(200).send(data);
-});
-app.post("/", (req, res) => {
-  let data = {
-    message: "Hello World!" + req.body.msg,
-  };
-  res.status(200).send({ data });
-});
-
+// Passport config
+require("./config/passport")(passport);
+app.use(passport.initialize());
+app.use("/", require("./routes/index"));
+app.use("/course", require("./routes/course"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, function () {
