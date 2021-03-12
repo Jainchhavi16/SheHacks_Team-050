@@ -1,6 +1,6 @@
 const express = require('express')
 require('./db/mongoose')
-const User = require('./models/course')
+const Course = require('./models/course')
 // to put routes in separate files 
 const courseRouter = require('./routers/course')
  
