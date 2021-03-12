@@ -2,7 +2,7 @@ const express = require('express')
 const router = new express.Router()
 const Course = require('../models/course')
 
-router.post('/courses', async (req, res) => {
+router.post('/', async (req, res) => {
     const course = new Course(req.body)
     try{
         await course.save()
@@ -14,7 +14,7 @@ router.post('/courses', async (req, res) => {
     }
 })
 
-router.get('/courses', async (req, res) => {
+router.get('/', async (req, res) => {
     try{
         const courses = await Course.find({})
         res.status(200).send(courses)
@@ -23,8 +23,8 @@ router.get('/courses', async (req, res) => {
     }
 })
 
-router.patch('/courses', async (req, res)=>{
-    const updates = Objects.keys(req.body)
+router.patch('/', async (req, res)=>{
+    const updates = Object.keys(req.body)
     const allowedUpdates = ['subject', 'title', 'description']
     const isValidOperation =updates.every((update)=> allowedUpdates.includes(update))
     if(!isValidOperation) {
@@ -44,12 +44,13 @@ router.patch('/courses', async (req, res)=>{
     
 })
 
-router.delete('/courses', async (req, res) => {
+router.delete('/', async (req, res) => {
     try{
         const course = await Course.findOne({title: req.body.title}) 
         if(!course) {
             return res.status(404).send()
             }
+            await course.remove()
            res.send(course)
         }catch(e) {
             res.status(500).send(e)
