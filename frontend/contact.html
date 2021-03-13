@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <!-- FONT-AWESOME ICONS -->
+    <script src="https://kit.fontawesome.com/88ecc5f85f.js"></script>
+
+    <!-- GOOGLE FONTS -->
+
+    <!-- EXTERNAL CSS -->
+
+    
+    <link rel="stylesheet" href="./style/contact.css" />
+  </head>
+  <body>
+    <!-- navbar
+    contact details
+    social media pages link and api(optional)
+    footer  -->
+    
+    <div class="container py-4" style="margin-top: 5%;">
+      <div
+        class="w-100 d-flex justify-content-between align-items-center flex-wrap"
+      >
+        <div class="col-12 col-md-5">
+          <img src="./assets/contact.jpg" alt="" class="w-100" />
+        </div>
+        <div class="col-12 col-md-7 justify-content-between">
+          <p class="h3 text-center">Have a Question ?</p>
+          <p class="h4 text-center">Contact Us</p>
+          <hr />
+          <form
+            action="https://formspree.io/f/mpzodeyz"
+            method="POST"
+            class="d-flex flex-wrap justify-content-center"
+          >
+            <div class="w-100 row justify-content-center m-0">
+              <div class="col-12 col-md-6">
+                <label for="fname">First Name : </label><br />
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="w-100 rounded p-2 customInput"
+                  name="fname"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="lname">Last Name : </label><br />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="w-100 rounded p-2 customInput"
+                  name="lname"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="mobile">Contact Number : </label><br />
+                <input
+                  type="text"
+                  placeholder="9876543210"
+                  class="w-100 rounded p-2 customInput"
+                  name="contact-number"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="email">Email : </label><br />
+                <input
+                  type="text"
+                  placeholder="abc@sample.com"
+                  class="w-100 rounded p-2 customInput"
+                  name="email"
+                />
+              </div>
+              <div class="col-12">
+                <label for="message">Your Query / Message : </label>
+                <textarea
+                  name="message"
+                  id=""
+                  rows="5"
+                  class="customInput w-100"
+                ></textarea>
+              </div>
+            </div>
+            <button class="btn btn-outline-secondary mx-auto" type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+   
+    
+    <!-- JAVASCRIPT FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <!-- <script type="text/javascript" src="../js/index.js"></script> -->
+  </body>
+</html>

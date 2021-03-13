@@ -14,6 +14,7 @@ require("./config/passport")(passport);
 app.use(passport.initialize());
 app.use("/", require("./routes/index"));
 app.use("/course", require("./routes/course"));
+app.use("/courseContent", require("./routes/CourseContent"));
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function () {
