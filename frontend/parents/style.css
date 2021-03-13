@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  background-color: #f5f6f7;
+}
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+.col {
+  flex-basis: 50%;
+}
+
+h1 {
+  color: black;
+  font-size: 80px;
+}
+
+p {
+  color: #fff;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+button {
+  width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 12px 0;
+  background: #fff;
+  border: 0;
+  border: 20px;
+  outline: none;
+  margin-top: 30px;
+}
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  transition: transform 2;
+  background-position: center;
+  background-size: cover;
+}
+.col {
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.c1 {
+  background-color: #32d990;
+}
+.c2 {
+  background-color: #32d990;
+}
+.c3 {
+  background-color: #32d990;
+}
+.c4 {
+  background-color: #32d990;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+}
+.card {
+  text-shadow: 0 0 15px #2feb99;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
