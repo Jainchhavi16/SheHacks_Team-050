@@ -18,6 +18,7 @@ app.use("/course", require("./routes/course"));
 app.use("/quiz", require("./routes/quiz"));
 app.use("/courses", require("./routes/courses"));
 app.use("/student", require("./routes/student"));
+app.use("/courseContent", require("./routes/CourseContent"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, function () {

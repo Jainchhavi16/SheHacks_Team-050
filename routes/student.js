@@ -35,46 +35,19 @@ router.post("/enroll", async (req, res) => {
   } catch (error) {
     res.status(500).send(error);
   }
-  //   let user = Student.findOne({ email: req.body.email });
-  //   if (user) {
-  //     console.log("update");
-  //     Student.update(
-  //       { email: email },
-  //       {
-  //         $push: {
-  //           courseID: courseID,
-  //         },
-  //       }
-  //     );
-  //   } else {
-  //     console.log("user not found");
-  //     //   const student = new Student();
-  //     //   student.email = email;
-  //     //   student.courseID = courseID;
-  //     //   student.save((err, doc) => {
-  //     //     if (!err) res.status(200).send({ message: "Course added", doc });
-  //     //     else console.log(err);
-  //     //   });
-  //   }
 });
 
-// -> student/courses
-router.post("/courses", (req, res) => {
-  const email = req.body.email;
-  const courses = Student.find({ email: email });
-  console.log(courses);
-  if (courses.length) res.status(200).send(courses);
-  else res.status(500).send({ message: "No enrolled courses" });
-});
-//get all questions created by that teacher
-router.post("/questions", async (req, res) => {
-  let email = req.body.email;
-  let questions = await Question.find({ email: email });
-  if (questions.length) res.status(200).send(questions);
-  else
-    res
-      .status(500)
-      .send({ message: "No Quiz Questions created by you.Create one now" });
+// -> student/courses ->Get all courses of student
+router.post("/courses", async (req, res) => {
+  try {
+    let email = req.body.email;
+    const courses = await Student.find({ email: email });
+    console.log(courses);
+    if (courses) res.status(200).send(courses);
+    else res.status(500).send({ message: "No enrolled courses" });
+  } catch (error) {
+    res.status(500).send(error);
+  }
 });
 
 module.exports = router;
