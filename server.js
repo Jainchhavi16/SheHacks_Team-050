@@ -12,8 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Passport config
 require("./config/passport")(passport);
 app.use(passport.initialize());
+
 app.use("/", require("./routes/index"));
 app.use("/course", require("./routes/course"));
+app.use("/quiz", require("./routes/quiz"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, function () {

@@ -54,6 +54,7 @@ module.exports.login = (req, res, next) => {
             res.json({
               success: true,
               token: "Bearer " + token,
+              user: user,
             });
           }
         );
