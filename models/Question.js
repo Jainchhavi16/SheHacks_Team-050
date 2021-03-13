@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 const QuestionSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true,
+  },
   category: {
     type: String,
     required: true,

@@ -6,13 +6,15 @@ const config = require("config");
 const secretOrKey = config.get("secretOrKey");
 module.exports.register = (req, res, next) => {
   const user = new User();
+  user.type = req.body.type; //1->student 2->teacher 3->parent
   user.displayName = req.body.displayName;
   user.firstName = req.body.firstName;
   user.lastName = req.body.lastName;
   user.email = req.body.email;
   user.image = req.body.image;
-  user.rollNo = req.body.rollNo;
   user.password = req.body.password;
+  user.rollNo = req.body.rollNo;
+  user.childrollno = req.body.childrollno;
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(user.password, salt, (err, hash) => {
       if (err) console.log(err);

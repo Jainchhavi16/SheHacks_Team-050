@@ -17,6 +17,10 @@ const courseSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
 });
 
 const Course = mongoose.model("Course", courseSchema);

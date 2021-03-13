@@ -14,6 +14,7 @@ router.post("/", (req, res) => {
   if (req.body.type == 2) {
     question.category = req.body.category; //subject id/name
     question.text = req.body.text;
+    question.email = req.body.email;
     question.type = req.body.type;
     question.difficulty = req.body.difficulty;
     question.answer = req.body.answer;

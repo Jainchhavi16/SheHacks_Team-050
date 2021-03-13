@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    required: true,
+  },
   displayName: {
     type: String,
     required: true,
@@ -26,11 +30,13 @@ const UserSchema = new mongoose.Schema({
   },
   rollNo: {
     type: Number,
-    required: true,
   },
   password: {
     type: String,
     required: true,
+  },
+  childrollno: {
+    type: String,
   },
   saltSecret: String,
 });
